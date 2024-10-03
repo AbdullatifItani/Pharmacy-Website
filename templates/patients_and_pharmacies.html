@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients and Pharmacies</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Patients and Pharmacies in {{ location }}</h1>
+    
+    <h2>Patients:</h2>
+    <ul>
+        {% for patient in patients %}
+            <li>{{ patient[1] }} - {{ patient[2] }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Pharmacies:</h2>
+    <ul>
+        {% for pharmacy in pharmacies %}
+            <li>{{ pharmacy[1] }} - {{ pharmacy[2] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

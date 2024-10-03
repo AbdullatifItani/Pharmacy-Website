@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert New Doctor</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Insert New Doctor</h1>
+    <form action="/insert_doctor" method="POST">
+        <label for="did">Doctor ID:</label><br>
+        <input type="text" id="did" name="did" required><br>
+
+        <label for="dname">Doctor Name:</label><br>
+        <input type="text" id="dname" name="dname" required><br>
+        
+        <label for="specialty">Specialty:</label><br>
+        <input type="text" id="specialty" name="specialty" required><br>
+        
+        <label for="years_of_exp">Years of Experience:</label><br>
+        <input type="number" id="years_of_exp" name="years_of_exp" min="0" required><br>
+        
+        <label for="patient_id">Patient ID:</label><br>
+        <input type="text" id="patient_id" name="patient_id" required><br>
+        
+        <input type="checkbox" id="is_primary" name="is_primary">
+        <label for="is_primary">Primary Doctor</label><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html><head></head>
+   <body>
+   {% include 'navigation_bar.html' %}
+   <h1>{{ cc }}</h1>
+    <table border=15 cellpadding=15 cellspacing=10>
+	<tr>
+	<td>
+      <table border=10 cellpadding=10 cellspacing=8>
+         <thead>
+            <td>Doctor ID</td>
+            <td>Doctor Name</td>
+	    <td>Doctor Specialty</td>
+	    <td>Doctor Experience</td>
+
+         </thead>
+         
+         {% for row in rows1 %}
+            <tr>
+               <td>{{ row[0] }}</td>
+               <td>{{ row[1] }}</td>
+	       <td>{{ row[2] }}</td>
+	       <td>{{ row[3] }}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+	  </td>
+	  <td>
+	   <table border=10 cellpadding=10 cellspacing=8>
+         <thead>
+            <td>Patient ID</td>
+            <td>Patient Name</td>
+			<td>Patient Address</td>
+	    <td>Patient Age</td>
+	    
+
+         </thead>
+         
+         {% for row in rows2 %}
+            <tr>
+               <td>{{ row[0] }}</td>
+               <td>{{ row[1] }}</td>
+	       <td>{{ row[2] }}</td>
+	       <td>{{ row[3] }}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+	  </td>
+	  </tr>
+	  
+	  <tr>
+	<td>
+      <table border=10 cellpadding=10 cellspacing=8>
+         <thead>
+            <td>Drug ID</td>
+            <td>Drug Name</td>
+	    <td>Drug Formula</td>
+
+
+         </thead>
+         
+         {% for row in rows3 %}
+            <tr>
+               <td>{{ row[0] }}</td>
+               <td>{{ row[1] }}</td>
+	       <td>{{ row[2] }}</td>
+
+
+            </tr>
+         {% endfor %}
+      </table>
+	  </td>
+	  <td>
+	   <table border=10 cellpadding=10 cellspacing=8>
+         <thead>
+            <td>Pharmacy ID</td>
+            <td>Pharmacy Name</td>
+			<td>Pharmacy Location</td>
+	    <td>Doctor ID</td>
+	    
+
+         </thead>
+         
+         {% for row in rows4 %}
+            <tr>
+               <td>{{ row[0] }}</td>
+               <td>{{ row[1] }}</td>
+	       <td>{{ row[2] }}</td>
+	       <td>{{ row[3] }}</td>
+
+            </tr>
+         {% endfor %}
+      </table>
+	  </td>
+	  </tr>
+	 
+<tr><td>	 
+	   <form action="" method="POST">
+      <br>  Enter a Doctor ID: <br>
+      
+        <input type="text" name="docid"><br>
+      
+    
+        <input type="submit" value="Submit ID">
+</form> 
+		</td>
+		<td>
+	  <ul>
+       <li>  Total Number of patients: {{ numall }}</li><br>
+	   <li>Doctor is: {{ doct }} and he/she has {{ num }} patients </li>
+	   <li>They are {{ pat }}</li>
+	   <li>ALL his/her prescribed drugs are: {{ drugsall }} </li>
+       
+	   <li>Pharmacies supervised are: {{ pharm }}</li>
+       
+	</ul>
+       
+	  </td>
+		
+		
+</tr>
+
+
+	  </table>
+	  
+     
+   </body>
+</html>

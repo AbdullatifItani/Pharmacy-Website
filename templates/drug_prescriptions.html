@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Prescriptions</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Drug Prescriptions</h1>
+    <table>
+        <tr>
+            <th>Drug Name</th>
+            <th>Number of Doctors Prescribing</th>
+        </tr>
+        {% for row in drug_prescription_counts %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

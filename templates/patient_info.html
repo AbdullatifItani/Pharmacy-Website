@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Patient Information</h1>
+    <p>Patient ID: {{ patient_id }}</p>
+    <p>Patient Name: {{ patient_name }}</p>
+    
+    <h2>Primary Doctor:</h2>
+    <p>{{ primary_doctor_info }}</p>
+    
+    <h2>Other Doctors:</h2>
+    <ul>
+        {% for doctor in other_doctor_info %}
+            <li>{{ doctor }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Drugs Taken:</h2>
+    <ul>
+        {% for drug in drugs_taken %}
+            <li>{{ drug }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+

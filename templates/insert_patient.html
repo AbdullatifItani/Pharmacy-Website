@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert New Patient</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Insert New Patient</h1>
+    <form action="/insert_patient" method="POST">
+        <label for="pid">Patient ID:</label><br>
+        <input type="text" id="pid" name="pid" required><br>
+        
+        <label for="pname">Patient Name:</label><br>
+        <input type="text" id="pname" name="pname" required><br>
+        
+        <label for="paddress">Patient Address:</label><br>
+        <input type="text" id="paddress" name="paddress"><br>
+        
+        <label for="page">Patient Age:</label><br>
+        <input type="number" id="page" name="page" min="1" required><br>
+        
+        <label for="prim_did">Primary Doctor ID:</label><br>
+        <input type="text" id="prim_did" name="prim_did" required><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

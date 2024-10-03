@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Prescription</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Create Prescription</h1>
+    <form action="/insert_prescription" method="post">
+        <label for="patient_id">Patient ID:</label><br>
+        <input type="text" id="patient_id" name="patient_id" required><br>
+        
+        <label for="doctor_id">Doctor ID:</label><br>
+        <input type="text" id="doctor_id" name="doctor_id" required><br>
+        
+        <label for="drug_id">Drug ID:</label><br>
+        <input type="text" id="drug_id" name="drug_id" required><br>
+        
+        <label for="p_date">Prescription Date:</label><br>
+        <input type="date" id="p_date" name="p_date" required><br>
+        
+        <label for="prescription">Prescription Details:</label><br>
+        <textarea id="prescription" name="prescription" rows="4" cols="50" required></textarea><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

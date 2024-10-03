@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pharmacy</title>
+</head>
+<body>
+    {% include 'navigation_bar.html' %}
+    <h1>Add Pharmacy</h1>
+    <form action="/insert_pharmacy" method="POST">
+        <label for="hid">Pharmacy ID:</label><br>
+        <input type="text" id="hid" name="hid" required><br>
+
+        <label for="pharm_name">Pharmacy Name:</label><br>
+        <input type="text" id="pharm_name" name="pharm_name" required><br>
+        
+        <label for="pharm_location">Location:</label><br>
+        <input type="text" id="pharm_location" name="pharm_location" required><br>
+        
+        <label for="supervis_id">Supervisor Doctor ID:</label><br>
+        <input type="text" id="supervis_id" name="supervis_id" required><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
